@@ -1,0 +1,102 @@
+@import "variables";
+
+@mixin card-el {
+  background-color: $white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1.5rem 1.5rem 0.2rem hsla(210, 34%, 89%, 0.5);
+  box-shadow: 0 1rem 1rem 0 rgba(75, 121, 180, 0.15);
+  height: 16.5rem;
+  margin: 2em;
+  width: 23rem;
+}
+
+@mixin card-border-col($color) {
+  background-color: $color;
+}
+
+// CARD STYLING
+.card {
+  position: relative;
+
+  @include card-el;
+  @include mquery-phones {
+    height: 13rem;
+    margin: 0 auto;
+    margin-top: 1.75rem;
+    width: 77%;
+  }
+  @include mquery-tablets {
+    margin: 0 auto;
+    width: 21rem;
+  }
+  @include mquery-desktops {
+    transition: all 0.6s cubic-bezier(0.2, 0.8, 0.44, 1);
+    &:after {
+      @include card-el;
+      content: "";
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      transition: all 0.6s cubic-bezier(0.2, 0.8, 0.44, 1);
+      z-index: -1;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.15, 1.15);
+    }
+  }
+  .card__border {
+    background-color: red;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    height: 1.75%;
+    width: 100%;
+  }
+  .card__border--blue {
+    @include card-border-col($blue);
+  }
+  .card__border--cyan {
+    @include card-border-col($cyan);
+  }
+  .card__border--orange {
+    @include card-border-col($orange);
+  }
+  .card__border--red {
+    @include card-border-col($red);
+  }
+  .card__content {
+    margin: 2rem;
+    text-align: left;
+    @include mquery-phones {
+      margin: 1.5rem;
+    }
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+    p {
+      color: $grey-blue;
+      font-size: 0.85rem;
+      line-height: 1.8;
+      margin-top: 0.5rem;
+    }
+    .content__image {
+      margin-top: 2rem;
+      text-align: right;
+      @include mquery-phones {
+        margin-top: 1rem;
+      }
+      img {
+        @include mquery-phones {
+          width: 3.75rem;
+        }
+      }
+    }
+  }
+}

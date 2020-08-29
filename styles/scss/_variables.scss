@@ -1,0 +1,15 @@
+// COLORS - MAIN SCHEME
+$blue: hsl(212, 86%, 64%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$red: hsl(0, 78%, 62%);
+
+// COLORS - NEUTRAL (BG)
+$dark-blue: hsl(234, 12%, 34%);
+$grey-blue: hsl(229, 6%, 66%);
+$light-grey: hsl(0, 0%, 98%);
+$white: white;
+
+// FONTS
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,400,600&display=swap');
+$font-main: Poppins, sans-serif;
