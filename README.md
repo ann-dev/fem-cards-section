@@ -18,8 +18,6 @@ My solution for one of challenges for
 
 It's a static HTML page - just open it in your default web browser. For compiling SCSS you can use Node-Sass or a VsCode plugin.
 
-### 📝 License
+### Credits
 
-Copyright © 2020 [ann-dev](https://github.com/ann-dev).
-
-This project is [MIT](https://github.com/ann-dev/frontend-mentor-challenges/blob/master/LICENSE) licensed.
+Designed by [Frontend Mentor Team](https://www.frontendmentor.io/). Code written by [ann-dev](https://github.com/ann-dev).
