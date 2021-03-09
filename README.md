@@ -1,6 +1,6 @@
 <h1 align="center">Four card feature section</h1>
 
-![preview](./preview.png)
+![preview](./preview.jpg)
 
 <h3 align="center"><a href="https://ann-dev.github.io/fem-cards-section/" target="_blank">✨ Live Demo</a></h3>
 
