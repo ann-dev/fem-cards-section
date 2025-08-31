@@ -1,7 +1,8 @@
-@import "variables";
+@use "variables";
+@use "mixins";
 
 @mixin card-el {
-  background-color: $white;
+  background-color: variables.$white;
   border-radius: 0.5rem;
   box-shadow: 0 1.5rem 1.5rem 0.2rem hsla(210, 34%, 89%, 0.5);
   box-shadow: 0 1rem 1rem 0 rgba(75, 121, 180, 0.15);
@@ -19,17 +20,17 @@
   position: relative;
 
   @include card-el;
-  @include mquery-phones {
+  @include mixins.mquery-phones {
     height: 13rem;
     margin: 0 auto;
     margin-top: 1.75rem;
     width: 77%;
   }
-  @include mquery-tablets {
+  @include mixins.mquery-tablets {
     margin: 0 auto;
     width: 21rem;
   }
-  @include mquery-desktops {
+  @include mixins.mquery-desktops {
     transition: all 0.6s cubic-bezier(0.2, 0.8, 0.44, 1);
     &:after {
       @include card-el;
@@ -59,21 +60,21 @@
     width: 100%;
   }
   .card__border--blue {
-    @include card-border-col($blue);
+    @include card-border-col(variables.$blue);
   }
   .card__border--cyan {
-    @include card-border-col($cyan);
+    @include card-border-col(variables.$cyan);
   }
   .card__border--orange {
-    @include card-border-col($orange);
+    @include card-border-col(variables.$orange);
   }
   .card__border--red {
-    @include card-border-col($red);
+    @include card-border-col(variables.$red);
   }
   .card__content {
     margin: 2rem;
     text-align: left;
-    @include mquery-phones {
+    @include mixins.mquery-phones {
       margin: 1.5rem;
     }
     h2 {
@@ -81,7 +82,7 @@
       font-weight: 600;
     }
     p {
-      color: $grey-blue;
+      color: variables.$grey-blue;
       font-size: 0.85rem;
       line-height: 1.8;
       margin-top: 0.5rem;
@@ -89,11 +90,11 @@
     .content__image {
       margin-top: 2rem;
       text-align: right;
-      @include mquery-phones {
+      @include mixins.mquery-phones {
         margin-top: 1rem;
       }
       img {
-        @include mquery-phones {
+        @include mixins.mquery-phones {
           width: 3.75rem;
         }
       }

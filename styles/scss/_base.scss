@@ -1,6 +1,6 @@
-@import "variables";
-@import "reset";
-@import "mixins";
+@use "variables";
+@use "reset";
+@use "mixins";
 
 .light-text {
   font-weight: 200;
@@ -9,54 +9,54 @@
 // MAIN SET-UP
 
 body {
-  background-color: $light-grey;
-  color: $dark-blue;
+  background-color: variables.$light-grey;
+  color: variables.$dark-blue;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-family: $font-main;
+  font-family: variables.$font-main;
   text-align: center;
 
   h1 {
     font-weight: 600;
 
-    @include mquery-phones {
+    @include mixins.mquery-phones {
       font-size: 1.6rem;
       margin: 0 auto;
       width: 20rem;
     }
-    @include mquery-desktops {
+    @include mixins.mquery-desktops {
       font-size: 2.4rem;
     }
   }
 }
 
 .description {
-  @include mquery-phones {
+  @include mixins.mquery-phones {
     font-size: 100%;
     margin: 1em auto;
     width: 20rem;
   }
-  @include mquery-tablets {
+  @include mixins.mquery-tablets {
     margin: 1em auto;
     width: 60%;
   }
-  @include mquery-desktops {
+  @include mixins.mquery-desktops {
     margin: .8em auto;
     width: 35rem;
   }
   p {
-    color: $grey-blue;
+    color: variables.$grey-blue;
   }
 }
 
 .attribution {
   font-size: .9rem;
-  @include mquery-phones {
+  @include mixins.mquery-phones {
     font-size: .8rem;
     margin: 2em auto;
     width: 15rem;
   }
-  @include mquery-tablets {
+  @include mixins.mquery-tablets {
     margin: 3rem auto;
     width: 30%;
   }

@@ -1,10 +1,10 @@
 
-@import 'mixins';
+@use 'mixins';
 
 // LAYOUT STRUCTURE
 
 html {
-  @include mquery-desktops {
+  @include mixins.mquery-desktops {
     height: 100vh;
   }
 }
@@ -20,7 +20,7 @@ main {
   padding-top: 5.1rem;
   width: 100%;
 
-  @include mquery-desktops {
+  @include mixins.mquery-desktops {
     max-height: 922px;
   }
   
@@ -28,17 +28,17 @@ main {
     display: grid;
     justify-content: center;
     
-    @include mquery-phones {
+    @include mixins.mquery-phones {
       display: inherit;
       margin-top: 4.5rem;
     }
-    @include mquery-tablets {
+    @include mixins.mquery-tablets {
       grid-gap: 2.3rem;
       grid-template-columns: 21rem 21rem;
       grid-template-rows: 16rem 16rem;
       margin-top: 4.5rem;
     }
-    @include mquery-desktops {
+    @include mixins.mquery-desktops {
       align-content: center;
       margin-right: 2.1rem;
       margin-top: 2.5rem;
@@ -48,37 +48,37 @@ main {
     }
 
     .container {
-      @include mquery-desktops {
+      @include mixins.mquery-desktops {
         margin: 0 -1rem;
       }
     }
     .container__card1 {
-      @include mquery-desktops {
+      @include mixins.mquery-desktops {
         align-self: center;
         grid-row-start: 2;
       }
     }
     .container__card2 {
-      @include mquery-desktops {
+      @include mixins.mquery-desktops {
         align-self: start;
         grid-column-start: 2;
         grid-row-start: 1;
       }
     }
     .container__card3 {
-      @include mquery-tablets {
+      @include mixins.mquery-tablets {
         align-self: start;
         grid-column-start: 1;
         grid-row-start: 2;
       }
-      @include mquery-desktops {
+      @include mixins.mquery-desktops {
         align-self: end;
         grid-column-start: 2;
         grid-row-start: 3;
       }
     }
     .container__card4 {
-      @include mquery-desktops {
+      @include mixins.mquery-desktops {
         align-self: center;
         grid-column-start: 3;
         grid-row-start: 2;
