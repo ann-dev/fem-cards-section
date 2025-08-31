@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+styles/css/
+*.min.css
+*.min.css.map
+
+# Images and assets
+images/
+
+# Documentation
+README.md
+style-guide.md
+
+# Package files
+package-lock.json
+yarn.lock

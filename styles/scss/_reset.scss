@@ -1,3 +1,5 @@
+@use "variables";
+
 // CSS Reset by alligator.io
 
 html {
@@ -38,7 +40,7 @@ img {
 }
 
 a {
-  color: $dark-blue;
+  color: variables.$dark-blue;
   font-weight: 600;
   text-decoration: none;
   &:hover {
